@@ -18,7 +18,7 @@ class FizzBuzzTest extends Specification{
 		expect:
 			game.askFor(number) == result
 		where:
-			number 	|	result
+			number	|	result
 				1	|	"1"
 				2	|	"2"
 	}

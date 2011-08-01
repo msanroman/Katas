@@ -28,7 +28,7 @@ class FizzBuzzTest extends Specification{
 		expect:
 			game.askFor(number) == "Fizz"
 		where:
-			number << [3, 6, 9]
+			number << [3, 6, 9, 13]
 	}
 	
 	def "If a number is divisible by five, should return Buzz"(){
@@ -36,7 +36,7 @@ class FizzBuzzTest extends Specification{
 		expect:
 			game.askFor(number) == "Buzz"
 		where:
-			number << [5, 10, 20]
+			number << [5, 10, 20, 52]
 	}
 	
 	def "If a number is divisible by three and five, should return FizzBuzz"(){
@@ -44,7 +44,7 @@ class FizzBuzzTest extends Specification{
 		expect:
 			game.askFor(number) == "FizzBuzz"
 		where:
-			number << [15, 30, 45, 60]
+			number << [15, 30, 45, 53, 60]
 	}
 	
 	def "Test all numbers from 1 to 10"(){

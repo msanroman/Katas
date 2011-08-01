@@ -25,12 +25,31 @@ class FizzBuzz {
 
 	private boolean isFizz(int number){
 		
-		return number % FIZZ == 0
+		return number % FIZZ == 0 || containsFizz(number)
 	}
 	
 	private boolean isBuzz(int number){
 		
-		return number % BUZZ == 0
+		return number % BUZZ == 0 || containsBuzz(number)
 	}
 	
+	private boolean containsFizz(int number){
+		
+		contains(number, FIZZ)
+	}
+	
+	private boolean containsBuzz(int number){
+		
+		contains(number, BUZZ)
+	}
+	
+	private boolean contains(int number, int flag){
+		
+		while(number > 0){
+			if(number%10 == flag)
+				return true
+			number /= 10
+		}
+		return false
+	}
 }

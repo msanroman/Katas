@@ -5,9 +5,10 @@ class FizzBuzz {
 	static final FIZZ = 3
 	static final BUZZ = 5
 	
-	public def play(int number){
-		(1..number).collect { num -> 
-			askFor(num)
+	public def play(int upperBound){
+		
+		(1..upperBound).collect { number -> 
+			askFor(number)
 		}
 	}
 	

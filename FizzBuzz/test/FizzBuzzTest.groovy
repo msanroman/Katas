@@ -9,6 +9,7 @@ class FizzBuzzTest extends Specification{
 	FizzBuzz game
 	
 	def "setup"(){
+		
 		game = new FizzBuzz()
 	}
 
@@ -25,34 +26,25 @@ class FizzBuzzTest extends Specification{
 	def "If a number is divisible by three, should return Fizz"(){
 		
 		expect:
-			game.askFor(number) == result
+			game.askFor(number) == "Fizz"
 		where:
-			number	|	result
-				3	|	"Fizz"
-				6	|	"Fizz"
-				9	|	"Fizz"
+			number << [3, 6, 9]
 	}
 	
 	def "If a number is divisible by five, should return Buzz"(){
 		
 		expect:
-			game.askFor(number) == result
+			game.askFor(number) == "Buzz"
 		where:
-			number	|	result
-				5	|	"Buzz"
-				10	|	"Buzz"
-				20	|	"Buzz"
+			number << [5, 10, 20]
 	}
 	
 	def "If a number is divisible by three and five, should return FizzBuzz"(){
 		
 		expect:
-			game.askFor(number) == result
+			game.askFor(number) == "FizzBuzz"
 		where:
-			number	|	result
-				15	|	"FizzBuzz"
-				30	|	"FizzBuzz"
-				45	|	"FizzBuzz"
+			number << [15, 30, 45, 60]
 	}
 	
 	def "Test all numbers from 1 to 10"(){

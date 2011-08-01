@@ -2,8 +2,8 @@ package src
 
 class FizzBuzz {
 	
-	static final FIZZ = 3
-	static final BUZZ = 5
+	public static final FIZZ = 3
+	public static final BUZZ = 5
 	
 	public def play(int upperBound){
 		
@@ -35,12 +35,12 @@ class FizzBuzz {
 	
 	private boolean containsFizz(int number){
 		
-		contains(number, FIZZ)
+		return contains(number, FIZZ)
 	}
 	
 	private boolean containsBuzz(int number){
 		
-		contains(number, BUZZ)
+		return contains(number, BUZZ)
 	}
 	
 	private boolean contains(int number, int flag){

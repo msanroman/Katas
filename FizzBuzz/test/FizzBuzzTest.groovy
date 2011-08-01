@@ -47,9 +47,11 @@ class FizzBuzzTest extends Specification{
 			number << [15, 30, 45, 53, 60]
 	}
 	
-	def "Test all numbers from 1 to 10"(){
+	def "Test all numbers from 1 to 15"(){
 		
 		expect:
-			game.play(10) == ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"]
+			game.play(15) == ["1", "2", "Fizz", "4", "Buzz", "Fizz", 
+				"7", "8", "Fizz", "Buzz", "11", "Fizz", "Fizz", 
+				"14", "FizzBuzz"]
 	}
 }
